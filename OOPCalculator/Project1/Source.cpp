@@ -29,14 +29,16 @@ int main() 			// multiply two numbers
 	calculationsFile.open(filename + ".txt");
 
 	cout << "Calculations:" << endl;
+	calculationsFile << "Calculations:\n";
 	for (int x = 0; x < calculations; x++)
 	{
 		cout << calculationArray[x][0] << " * " << calculationArray[x][1] << " = " << calculationArray[x][2] << endl;
+		calculationsFile << calculationArray[x][0] << " * " << calculationArray[x][1] << " = " << calculationArray[x][2] << endl;
 	}
 
 	calculationsFile.close();
 
-	cout << "Program ended. Press any key to exit!";
+	cout << "Program ended. Press any key to exit!" << endl;
 	system("pause");	//to hold the output screen
 	return 0;
 }
